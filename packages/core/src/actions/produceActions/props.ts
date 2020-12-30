@@ -3,29 +3,32 @@ import { createActions } from '../../store';
 import { PROPS_TYPES, PropsConfigType } from '../../types';
 
 export type AddPropsConfigPayload = {
-  newPropField?: string,
-  fatherFieldLocation: string,
-  childPropsConfig?: PropsConfigType[],
-  propType?: PROPS_TYPES
+	newPropField?: string
+	fatherFieldLocation: string
+	childPropsConfig?: PropsConfigType[]
+	propType?: PROPS_TYPES
 }
-export const addPropsConfig = (payload: AddPropsConfigPayload) => createActions({
-  type: ACTION_TYPES.addPropsConfig,
-  payload,
-});
+export const addPropsConfig = (payload: AddPropsConfigPayload) =>
+	createActions({
+		type: ACTION_TYPES.addPropsConfig,
+		payload,
+	});
 export type DeletePropsConfigPayload = {
-  fatherFieldLocation: string,
-  field: string
+	fatherFieldLocation: string
+	field: string
 }
-export const deletePropsConfig = (payload: DeletePropsConfigPayload) => createActions({
-  type: ACTION_TYPES.deletePropsConfig,
-  payload,
-});
+export const deletePropsConfig = (payload: DeletePropsConfigPayload) =>
+	createActions({
+		type: ACTION_TYPES.deletePropsConfig,
+		payload,
+	});
 export type ChangePropsPayload = {
-  props: any
+	props: any
 }
-export const changeProps = (payload: ChangePropsPayload) => createActions({
-  type: ACTION_TYPES.changeProps,
-  payload,
-});
+export const changeProps = (payload: ChangePropsPayload) =>
+	createActions({
+		type: ACTION_TYPES.changeProps,
+		payload,
+	});
 
 export const resetProps = () => createActions({ type: ACTION_TYPES.resetProps });

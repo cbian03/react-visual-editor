@@ -1,6 +1,6 @@
 {
-  "name": "brickd-core",
-  "version": "1.0.0-alpha.10",
+  "name": "@brickd/core",
+  "version": "1.0.0-alpha.16",
   "description": "> TODO: description",
   "author": "anye931123 <1278998669@qq.com>",
   "license": "MIT",
@@ -11,23 +11,21 @@
   "scripts": {
     "build": "tsc && rollup -c rollup.config.js",
     "clean": "../../scripts/clean_package.sh",
-    "dev": "tsc -w && rollup -c rollup.config.js -w"
+    "dev": "tsc -w & rollup -c rollup.config.js -w"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/brick-design/react-visual-editor.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "immer": "^6.0.5",
     "lodash": "^4.17.15",
-    "react": "^16.8.0",
     "redux": "^4.0.5"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.149",
-    "@types/react": "^16.9.35"
-  },
-  "peerDependencies": {
-    "react": ">= 16.8"
+    "@types/lodash": "^4.14.149"
   }
 }
